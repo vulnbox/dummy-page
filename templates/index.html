@@ -1,0 +1,9 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+    <h3>Welcome to dummy page.</h3>
+    {% if current_user.is_authenticated %}
+        <p>Hello: {{current_user.username}}</p>
+        <p>{{ flag }}</p>
+    {% endif %}
+{% endblock %}
