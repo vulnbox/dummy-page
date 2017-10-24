@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask import send_from_directory
@@ -9,9 +8,8 @@ from user import User, UserDoesntExist
 import secret
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
-app.config['SECRET_KEY'] = '459169B62F4A6D64'
-app.config['APPLICATION_ROOT'] = '/templates'
+app.config['DEBUG'] = False
+app.config['SECRET_KEY'] = ''
 
 login_manager = LoginManager()
 login_manager.init_app(app)
